@@ -1,13 +1,12 @@
 # My Daily Code Blocks
 
 * Today's code and daily code. 
-* Minimum Daily three blocks (Average five blocks) 
+* Minimum daily three blocks (Average five blocks)
+* These code blocks were based on what I wrote or books or videos (free online lectures). 
  
- 
- 
----
 
-**May**  
+**May**
+-  
 
 * 05092019
 	* Label Shadow
