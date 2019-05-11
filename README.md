@@ -18,3 +18,10 @@
 	* prepare(for:sender:)
 	* getView(int, View, ViewGrop)
 	* NSMutableAttributedString 
+* 05112019
+	* UIBezierPath
+	* Tab Bar 
+	* UIRefreshControl
+	* WebView
+
+	
