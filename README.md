@@ -18,10 +18,13 @@
 	* prepare(for:sender:)
 	* getView(int, View, ViewGrop)
 	* NSMutableAttributedString
-* 05112019
+* `05112019`
 	* UIBezierPath
 	* Tab Bar 
 	* UIRefreshControl
 	* WebView
-
+* `05122019`
+	* Error Handling 
+	* Codable, CodingKey
+	* Alternating Row Color 
 	
