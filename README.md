@@ -8,16 +8,16 @@
 **May**
 -  
 
-* 05092019
+* `05092019` 
 	* Label Shadow
 	* Property Observer
-	* Equatable, Comparable
-* 05102019
+	* Equatable, Comparable  
+* `05102019`
 	* URLComponents, URLQueryItem
 	* CABasicAnimation
 	* prepare(for:sender:)
 	* getView(int, View, ViewGrop)
-	* NSMutableAttributedString 
+	* NSMutableAttributedString
 * 05112019
 	* UIBezierPath
 	* Tab Bar 
