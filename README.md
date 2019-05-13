@@ -27,4 +27,8 @@
 	* Error Handling 
 	* Codable, CodingKey
 	* Alternating Row Color 
+* `05132019`
+	* Bezier Curve
+	* NSAttributedString
+	* NotificationCenter, keyboardFrameBeginUserInfoKey
 	
