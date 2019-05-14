@@ -31,4 +31,9 @@
 	* Bezier Curve
 	* NSAttributedString
 	* NotificationCenter, keyboardFrameBeginUserInfoKey
+* `05142019`
+	* DataSnapshot
+	* URLSession
+	* Multiple Returns
+	* NumberFormatter
 	
