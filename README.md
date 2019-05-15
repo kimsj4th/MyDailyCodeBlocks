@@ -3,6 +3,7 @@
 * Today's code and daily code. 
 * Minimum daily three blocks (Average five blocks)
 * These code blocks were based on what I wrote or books or videos (free online lectures). 
+* Also, I marked reference number in the block.
  
 
 **May**
@@ -36,4 +37,21 @@
 	* URLSession
 	* Multiple Returns
 	* NumberFormatter
-	
+* `05152019`
+	* Dictionary
+	* UIPinchGestureRecongnizer
+	* Update UI
+	* NSObject 
+
+
+
+
+
+
+
+
+# REFERENCES 
+
+###### Thanks to: 
+
+[1] _
