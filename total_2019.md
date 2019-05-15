@@ -9,7 +9,7 @@
 
 ### Dictionary
 ```swift
-// MARK: Refrence []
+// MARK: Reference []
     private var eyeBrowTilts = [
         FacialExpression.EyeBrows.relaxed: 0.5,
         .furrowed: -0.5,
@@ -34,7 +34,7 @@
 > UIKit > Touches, Presses, and Gestures > [UIPinchGestureRecognizer](https://developer.apple.com/documentation/uikit/uipinchgesturerecognizer)
 
 ```swift
-// MARK: Refrence []
+// MARK: Reference []
     @objc func changeScale(_ recognizer: UIPinchGestureRecognizer) {
         switch recognizer.state {
         case .changed:
@@ -55,7 +55,7 @@ myFaceView.addGestureRecognizer(UIPinchGestureRecognizer(target: myFaceView, act
 
 ### Update UI
 ```swift
-// MARK: Refrence []
+// MARK: Reference []
 @IBOutlet weak var myFaceView: FaceView! {
         didSet {
             updateUI()
