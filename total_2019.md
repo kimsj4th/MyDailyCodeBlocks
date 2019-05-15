@@ -1,5 +1,90 @@
 # total_2019
 
+
+
+
+
+
+# 05152019 
+
+### Dictionary
+```swift
+// MARK: Refrence []
+    private var eyeBrowTilts = [
+        FacialExpression.EyeBrows.relaxed: 0.5,
+        .furrowed: -0.5,
+        .normal: 0.0
+    ]
+    
+    private func updateUI() {
+        switch expression.eyes {
+        case .open:
+            myFaceView.eyeOpen = true
+        case .closed:
+            myFaceView.eyeOpen = false
+        case .squinting:
+            myFaceView.eyeOpen = false
+        }
+        myFaceView.mouthCurvature = mouthCurvatures[expression.mouth] ?? 0.0
+        myFaceView.eyeBrowTilt = eyeBrowTilts[expression.eyeBrows] ?? 0.0
+    }
+```
+
+### UIPinchGestureRecognizer
+> UIKit > Touches, Presses, and Gestures > [UIPinchGestureRecognizer](https://developer.apple.com/documentation/uikit/uipinchgesturerecognizer)
+
+```swift
+// MARK: Refrence []
+    @objc func changeScale(_ recognizer: UIPinchGestureRecognizer) {
+        switch recognizer.state {
+        case .changed:
+            fallthrough
+        case .ended:
+            scale *= recognizer.scale
+            recognizer.scale = 1.0
+        default:
+            break
+        }
+    }
+```
+
+```swift
+myFaceView.addGestureRecognizer(UIPinchGestureRecognizer(target: myFaceView, action: #selector(FaceView.changeScale(_:))))
+```
+
+
+### Update UI
+```swift
+// MARK: Refrence []
+@IBOutlet weak var myFaceView: FaceView! {
+        didSet {
+            updateUI()
+        }
+    }
+    var expression = FacialExpression(eyes: .closed, eyeBrows: .relaxed, mouth: .smirk) {
+        didSet {
+            updateUI()
+        }
+    }
+```
+
+
+### NSObject
+
+```swift
+class UserModel: NSObject {
+    @objc var profileImageURL: String?
+    @objc var userName: String?
+}
+```
+```swift
+@objcMembers
+class UserModel: NSObject {
+    var profileImageURL: String?
+    var userName: String?
+}
+```
+
 # 05142019 
 
 ### DataSnapshot
