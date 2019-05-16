@@ -42,6 +42,10 @@
 	* UIPinchGestureRecongnizer
 	* Update UI
 	* NSObject 
+* `05162019`
+	* UIButton
+	* UISwipeGestureRecognizer
+	* UITapGestureRecognizer 
 
 
 
