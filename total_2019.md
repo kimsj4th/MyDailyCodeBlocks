@@ -1,6 +1,61 @@
 # total_2019
 
 
+# 05172019 
+
+### UILabel 
+
+
+```objective-c
+    CGRect frame = CGRectMake(100, 100, 200, 21);
+    UILabel *objcLabel = [[UILabel alloc] initWithFrame:frame];
+    objcLabel.text = @"Objective Label";
+    objcLabel.font = [UIFont systemFontOfSize:20 weight:UIFontWeightBold];
+    objcLabel.textColor = [UIColor blueColor];
+    objcLabel.layer.shadowOffset = CGSizeMake(3, 3);
+    objcLabel.layer.shadowOpacity = 0.7;
+    objcLabel.layer.shadowRadius = 2;
+    [self.view addSubview:objcLabel];
+```
+
+
+### NSMutableAttributedString
+> Foundation > Strings and Text > [NSMutableAttributedString](https://developer.apple.com/documentation/foundation/nsmutableattributedstring?language=objc)
+
+```objective-c
+    UILabel *underlineLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 200, 200, 50)];
+    underlineLabel.backgroundColor = [UIColor lightGrayColor];
+    NSMutableAttributedString *attributedString;
+    attributedString = [[NSMutableAttributedString alloc] initWithString:@"Apply UnderLining"];
+    [attributedString addAttribute:NSUnderlineStyleAttributeName value:@1 range:NSMakeRange(0, [attributedString length])];
+    [underlineLabel setAttributedText:attributedString];
+    [self.view addSubview:underlineLabel];
+
+```
+
+### Timer 
+> Foundation > Task Management > [Timer](https://developer.apple.com/documentation/foundation/timer)
+
+```swift
+// MARK: Reference []
+    @objc func step() {
+        car.center.x += 10
+        let carWidth = car.bounds.width
+        if car.center.x > view.bounds.width + carWidth / 2 {
+            car.center.x = -carWidth
+            let viewHeight = view.bounds.height
+            car.center.y = CGFloat(arc4random_uniform(UInt32(viewHeight)))
+        }
+    }
+
+```
+```swift
+        Timer.scheduledTimer(timeInterval: 0.1,
+                             target: self,
+                             selector: #selector(step),
+                             userInfo: nil,
+                             repeats: true)
+```
 
 # 05162019 
 

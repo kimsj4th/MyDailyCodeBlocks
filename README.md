@@ -46,6 +46,10 @@
 	* UIButton
 	* UISwipeGestureRecognizer
 	* UITapGestureRecognizer 
+* `05172019`
+	* UILabel
+	* NSMutableAttributedString
+	* Timer 
 
 
 
