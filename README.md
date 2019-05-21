@@ -50,6 +50,11 @@
 	* UILabel
 	* NSMutableAttributedString
 	* Timer 
+* `05212019`
+	* isEqualToString
+	* NSTimezone
+	* sortedArrayUsingComparator
+	
 
 
 
