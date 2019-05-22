@@ -1,8 +1,161 @@
 # total_2019
 
-# **05212019**
+
+## 05222019 
 
 
+
+### TableViewDataSource 
+> UIKit > Viewes and Controls > Table Views > `UITableView` > [UITableViewDataSource](https://developer.apple.com/documentation/uikit/uitableviewdatasource)
+
+
+```objective-c
+#pragma mark - Reference [] 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return self.displayList.count;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    APLRegion *region = self.displayList[section];
+    return  region.timeZoneWrappers.count;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    APLRegion *region = self.displayList[section];
+    return region.name;
+    
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    static NSString *MyIdendifier = @"MyIdentifier";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdendifier];
+    APLRegion *region = self.displayList[indexPath.section];
+    APLTimeZoneWrapper *timeZoneWrapper = region.timeZoneWrappers[indexPath.row];
+    
+    cell.textLabel.text = timeZoneWrapper.timeZoneLocaleName;
+    return cell;
+}
+```
+
+```swift
+// MARK: API Reference
+public protocol UITableViewDataSource : NSObjectProtocol {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    
+    optional func numberOfSections(in tableView: UITableView) -> Int
+    
+    optional func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?
+    
+    optional func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String?
+    
+    optional func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
+    
+    optional func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool
+    
+    optional func sectionIndexTitles(for tableView: UITableView) -> [String]? // return list of section titles to display in section index view (e.g. "ABCD...Z#")
+    
+    optional func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int
+    
+    optional func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath)
+    
+    optional func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath)
+}
+```
+
+```swift
+// MARK: - Reference [] 
+override func numberOfSections(in tableView: UITableView) -> Int {
+        return meals.count
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return meals[section].food.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "foodCell", for: indexPath)
+        
+        let meal = meals[indexPath.section]
+        let food = meal.food[indexPath.row]
+        
+        cell.textLabel?.text = food.name
+        cell.detailTextLabel?.text = food.description
+        
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return meals[section].name
+    }
+```
+
+
+### specifier character 
+> [www.cplusplus.com/reference](http://www.cplusplus.com/reference/cstdio/printf/)
+
+
+```c++
+#include <stdio.h>
+
+int main()
+{
+   printf ("Characters: %c %c \n", 'a', 65);
+   printf ("Decimals: %d %ld\n", 1977, 650000L);
+   printf ("Preceding with blanks: %10d \n", 1977);
+   printf ("Preceding with zeros: %010d \n", 1977);
+   printf ("Some different radices: %d %x %o %#x %#o \n", 100, 100, 100, 100, 100);
+   printf ("floats: %4.2f %+.0e %E \n", 3.1416, 3.1416, 3.1416);
+   printf ("Width trick: %*d \n", 5, 10);
+   printf ("%s \n", "A string");
+   return 0;
+}
+/* 
+Characters: a A
+Decimals: 1977 650000
+Preceding with blanks:       1977
+Preceding with zeros: 0000001977
+Some different radices: 100 64 144 0x64 0144
+floats: 3.14 +3e+000 3.141600E+000
+Width trick:    10
+A string 
+*/
+```
+
+
+### NSSortDescriptor 
+> Foundation > Filters and Sorting > [NSSortDescriptor](https://developer.apple.com/documentation/foundation/nssortdescriptor)
+
+```objective-c 
+#pragma mark - Reference [] 
+- (void)sortZones {
+    NSSortDescriptor *nameSortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"timeZoneLocaleName" ascending:YES comparator:^(id name1, id name2) {
+        return [(NSString *)name1 localizedStandardCompare:name2];
+    }];
+    
+    [self.mutableTimeZoneWrappers sortUsingDescriptors:@[nameSortDescriptor]];
+    
+}
+```
+[in swift](https://stackoverflow.com/questions/30553843/nssortdescriptor-in-swift)
+
+```swift
+let sortedByFirstNameSwifty =  peopleObject.sorted(by: { $0.firstName < $1.firstName })
+print(sortedByFirstNameSwifty)
+```
+
+```swift
+let firstNameSortDescriptor = NSSortDescriptor(key: "firstName", ascending: true, selector: #selector(NSString.localizedStandardCompare(_:)))
+let sortedByFirstName = (peopleObject as NSArray).sortedArray(using: [firstNameSortDescriptor])
+print(sortedByFirstName)
+```
+
+
+
+# *05212019*
 
 ### isEqualToString 
 > Foundation > Strings and Text > NSString > [isEqualToString](https://developer.apple.com/documentation/foundation/nsstring/1407803-isequaltostring?language=objc)
