@@ -3,7 +3,9 @@
 * Today's code and daily code. 
 * Minimum daily three blocks (Average five blocks)
 * These code blocks were based on what I wrote or books or videos (free online lectures). 
-* Also, I marked reference number in the block.
+* Also, I marked reference number in the block. (Planned)
+* Add [total-2019.md](total-2019.md)
+
  
 
 **May**
@@ -54,6 +56,10 @@
 	* isEqualToString
 	* NSTimezone
 	* sortedArrayUsingComparator
+* `05222019`
+	* TableViewDataSource
+	* specifier character
+	* NSSortDescriptor
 	
 
 
