@@ -60,6 +60,9 @@
 	* TableViewDataSource
 	* specifier character
 	* NSSortDescriptor
+* `05232019`
+	* stringByReplacingOccurrencesOfString:withStrig:
+	* Designated Initializers 
 	
 
 
