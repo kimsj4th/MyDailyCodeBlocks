@@ -6,6 +6,15 @@
 * Also, I marked reference number in the block. (Planned)
 * Add [total-2019.md](total-2019.md)
 
+
+**September** 
+-
+
+* '09112019'
+	* UIPanGestureRecognizer 
+	* Programmatic AutoLayout 
+	* TakeSnapshot(WKWebView, WebKit) 
+
  
 
 **May**
