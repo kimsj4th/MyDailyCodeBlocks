@@ -10,7 +10,7 @@
 **September** 
 -
 
-* '09112019'
+* `09112019`
 	* UIPanGestureRecognizer 
 	* Programmatic AutoLayout 
 	* TakeSnapshot(WKWebView, WebKit) 

@@ -30,11 +30,11 @@
             isTrackingPanLocation = false
         }    }
 ```
+
 ### Programmatic AutoLayout
 
 
 ```swift
-
         let blurEffect = UIBlurEffect(style: .prominent)
         let statusView = UIVisualEffectView(effect: blurEffect)
         view.addSubview(statusView)
@@ -43,7 +43,8 @@
         statusView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         statusView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         statusView.heightAnchor.constraint(equalToConstant: UIApplication.shared.statusBarFrame.height).isActive = true
-        statusView.layer.borderWidth = 0.25```
+        statusView.layer.borderWidth = 0.25
+```
         
         
 ### TakeSnapshot
